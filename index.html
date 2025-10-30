@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Maraki — Creative web design & development studio in Ethiopia. Fast, responsive and affordable websites that help your business grow." />
+  <meta property="og:title" content="Maraki — Web Design & Development" />
+  <meta property="og:description" content="Fast, responsive, and creative websites. Start your project with Maraki today." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <!-- PNG/ICO fallbacks for older browsers -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <!-- Lottie player for animated hero (uses lottiefiles CDN). Replace src with your chosen animation URL if desired. -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  
+  <title>Maraki — Creative Web Design & Development</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Maraki home">Maraki</a>
+      <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-cta">
+        <a class="btn btn-accent" href="#contact">Get a Quote</a>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu">
+          <span class="nav-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-inner">
+      <a class="logo mobile" href="#">Maraki</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-accent" href="#contact">Get a Quote</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-title">Website በቀላሉ ያግኙ | ምርጥ ጥቅሞች እና አዳዲስ ስራዎች</h1>
+          <p class="hero-sub">Maraki builds fast, responsive, and creative websites to help your business grow.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-accent" href="tel:+251970050032">Call Now</a>
+            <a class="btn btn-ghost" href="#contact">Get a Quote</a>
+          </div>
+          <p class="hero-note">Have immediate questions? <a href="tel:+251970050032">Call us</a> or <a href="mailto:abebemihiretu217@gmail.com">email</a> — we reply within 24 hours.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-illustration" data-tilt data-reveal>
+              <lottie-player id="heroLottie" src="https://assets9.lottiefiles.com/packages/lf20_jcikwtux.json"  background="transparent"  speed="1"  loop  autoplay></lottie-player>
+              <noscript>
+                <img src="assets/hero-illustration.svg" alt="Web designers collaborating on a website" />
+              </noscript>
+            </div>
+        </div>
+      </div>
+      <div class="hero-bg"></div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Maraki</h2>
+        <p class="section-lead">Maraki is a creative web design and development studio based in Ethiopia. We build modern, user-friendly, and affordable websites that help your business stand out.</p>
+        <div class="icon-grid">
+          <div class="icon-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            <h3>Creative Design</h3>
+            <p>Unique designs focused on conversions and brand voice.</p>
+          </div>
+          <div class="icon-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 2v20" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/><path d="M5 7h14" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/></svg>
+            <h3>Fast Delivery</h3>
+            <p>Speedy turnarounds with clear milestones and communication.</p>
+          </div>
+          <div class="icon-card">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.2"/></svg>
+            <h3>SEO Optimization</h3>
+            <p>Built with best practices so your site gets found.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Web Design &amp; Development</h3>
+            <p>Custom sites built with performance and UX in mind.</p>
+          </article>
+          <article class="service-card">
+            <h3>E-Commerce Solutions</h3>
+            <p>Online stores with checkout, payments, and inventory.</p>
+          </article>
+          <article class="service-card">
+            <h3>SEO Optimization</h3>
+            <p>Technical and on-page SEO to improve visibility.</p>
+          </article>
+          <article class="service-card">
+            <h3>Website Maintenance</h3>
+            <p>Updates, backups, security and performance monitoring.</p>
+          </article>
+          <article class="service-card">
+            <h3>Branding &amp; Logo Design</h3>
+            <p>Brand identities that make an impression.</p>
+          </article>
+          <article class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>User-first interfaces and prototypes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <h2 class="section-title">Our Website Packages</h2>
+        <p class="section-lead">Choose the perfect plan for your business.</p>
+        <div class="pricing-grid">
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Simple Site</h3>
+              <p class="price">15,000 ETB</p>
+            </div>
+            <ul class="features">
+              <li>Domain and Hosting</li>
+              <li>Creative Web Design</li>
+              <li>Responsive Layout</li>
+              <li>SEO Optimization</li>
+              <li>3-Month Maintenance</li>
+            </ul>
+            <a class="btn btn-outline glowy" data-package="Simple Site" href="#contact">Request This Package</a>
+          </div>
+
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Personal Site</h3>
+              <p class="price">18,000 ETB</p>
+            </div>
+            <ul class="features">
+              <li>For freelancers or creators</li>
+              <li>Gallery & contact section</li>
+              <li>Custom domain</li>
+            </ul>
+            <a class="btn btn-outline glowy" data-package="Personal Site" href="#contact">Request This Package</a>
+          </div>
+
+          <div class="price-card popular">
+            <div class="price-header">
+              <h3>Business Site</h3>
+              <p class="price">25,000 ETB</p>
+            </div>
+            <ul class="features">
+              <li>Lead forms, team section, testimonials</li>
+              <li>CRM Integration</li>
+              <li>6-Month Maintenance</li>
+            </ul>
+            <a class="btn btn-accent glowy" data-package="Business Site" href="#contact">Request This Package</a>
+          </div>
+
+          <div class="price-card">
+            <div class="price-header">
+              <h3>E-Commerce</h3>
+              <p class="price">45,000 ETB</p>
+            </div>
+            <ul class="features">
+              <li>Online store with checkout</li>
+              <li>Payment gateway integration</li>
+              <li>Customer accounts</li>
+              <li>1-Year Maintenance</li>
+            </ul>
+            <a class="btn btn-outline glowy" data-package="E-Commerce" href="#contact">Request This Package</a>
+          </div>
+
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Educational / LMS</h3>
+              <p class="price">50,000 ETB</p>
+            </div>
+            <ul class="features">
+              <li>Course management system</li>
+              <li>User accounts & progress tracking</li>
+            </ul>
+            <a class="btn btn-outline glowy" data-package="Educational / LMS" href="#contact">Request This Package</a>
+          </div>
+
+          <div class="price-card">
+            <div class="price-header">
+              <h3>Real Estate</h3>
+              <p class="price">40,000 ETB</p>
+            </div>
+            <ul class="features">
+              <li>Property listings with filters</li>
+              <li>Contact forms</li>
+            </ul>
+            <a class="btn btn-outline glowy" data-package="Real Estate" href="#contact">Request This Package</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="clients-testimonials" id="clients">
+      <div class="container">
+        <h2 class="section-title">Trusted by local businesses</h2>
+        <p class="section-lead">We help businesses across industries build fast, reliable websites that convert.</p>
+
+        <div class="client-logos" aria-hidden="true">
+          <div class="logo">Maraki</div>
+          <div class="logo">ShopPro</div>
+          <div class="logo">Cafe Addis</div>
+          <div class="logo">LearnHub</div>
+          <div class="logo">EstateCo</div>
+        </div>
+
+        <div class="testimonial-wrap" role="region" aria-label="Client testimonials">
+          <div class="testimonial-slider" id="testimonialSlider" aria-live="polite" aria-atomic="false">
+            <blockquote class="testimonial-card">
+              <p>"Maraki redesigned our site and increased enquiries within two weeks. Very professional and fast turnaround."</p>
+              <cite>— Alem, Owner at Cafe Addis</cite>
+            </blockquote>
+
+            <blockquote class="testimonial-card">
+              <p>"Clear milestones, frequent updates, and a beautiful result. Our online sales doubled in three months."</p>
+              <cite>— Selam, Founder at ShopPro</cite>
+            </blockquote>
+
+            <blockquote class="testimonial-card">
+              <p>"Great communication and attention to detail. The team made launching our course platform simple."</p>
+              <cite>— Daniel, CEO at LearnHub</cite>
+            </blockquote>
+          </div>
+          <div class="testimonial-controls" id="testimonialControls" aria-hidden="false">
+            <button class="small" data-action="prev">‹</button>
+            <button class="small" data-action="next">›</button>
+          </div>
+        </div>
+
+        <div class="section-cta">
+          <a class="btn btn-accent" href="#contact">Start your project — Get a quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Let’s Build Your Dream Website</h2>
+        <p class="section-lead">We reply within 24 hours.</p>
+        <div class="contact-row">
+      <div class="contact-actions">
+        <a class="contact-btn" href="tel:+251970050032">📞 Call +251 970 050 032</a>
+        <a class="contact-btn" href="tel:+251970050025">📞 Call +251 970 050 025</a>
+              <a class="contact-btn" href="mailto:abebemihiretu217@gmail.com">✉️ Email abebemihiretu217@gmail.com</a>
+              <p class="muted">Prefer email or phone? Use the buttons above to call or open your email client — we reply within 24 hours.</p>
+            <div class="socials">
+              <a aria-label="Facebook" href="#">f</a>
+              <a aria-label="Instagram" href="#">ig</a>
+              <a aria-label="Telegram" href="#">tg</a>
+              <a aria-label="WhatsApp" href="#">wa</a>
+            </div>
+          </div>
+          <div class="contact-form" id="contactForm">
+            <div id="formMessage" class="form-message" aria-live="polite"></div>
+            <!-- Lightweight mailto-based contact form: opens the user's email client with a prefilled message. No server-side submission. -->
+            <form id="mailtoForm" class="mailto-form" aria-label="Contact form (opens your email client)">
+              <label>
+                <span>Name <span class="required-asterisk" aria-hidden="true">*</span></span>
+                <input type="text" id="contactName" name="name" placeholder="Your name" required aria-required="true">
+                <div class="field-error" id="errorName" aria-live="polite"></div>
+              </label>
+
+              <label>
+                <span>Your email <span class="required-asterisk" aria-hidden="true">*</span></span>
+                <input type="email" id="contactEmail" name="email" placeholder="you@example.com" required>
+                <div class="field-error" id="errorEmail" aria-live="polite"></div>
+              </label>
+
+              <label>
+                <span>Subject</span>
+                <input type="text" id="contactSubject" name="subject" placeholder="e.g. Inquiry — Business Site">
+                <div class="field-error" id="errorSubject" aria-live="polite"></div>
+              </label>
+
+              <label>
+                <span>Message <span class="required-asterisk" aria-hidden="true">*</span></span>
+                <textarea id="contactMessage" name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
+                <div class="field-error" id="errorMessage" aria-live="polite"></div>
+              </label>
+
+              <!-- This hidden field is prefilled when a pricing package is selected. -->
+              <input type="hidden" id="contactPackage" name="package" value="">
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-accent">Send via Email</button>
+                <small class="muted">This will open your email client. No data is sent to the website.</small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Maraki</div>
+        <p>© 2025 Maraki | All Rights Reserved | Built with Passion.</p>
+      </div>
+      <nav class="footer-nav">
+  <a href="#home">Home</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "maraki-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Maraki marketing site with serverless form handler",
+  "scripts": {
+    "start": "echo 'Local dev: open index.html or use your preferred static server'",
+    "dev": "vercel dev",
+    "gen:favicons": "node scripts/generate-favicons.js"
+  },
+  "devDependencies": {
+    "png-to-ico": "^3.0.1",
+    "sharp": "^0.32.6"
+  }
+}
