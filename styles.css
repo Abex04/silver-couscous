@@ -74,8 +74,6 @@ body{
 /* Form message */
 .form-message{min-height:24px;margin-bottom:8px}
 
-/* Social icons refinement */
-.socials a{width:40px;height:40px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));color:var(--muted)}
 
 /* Small screens adjustments */
 @media (max-width:680px){
@@ -165,8 +163,7 @@ lottie-player#heroLottie > *{border-radius:12px}
 .contact-actions{display:flex;flex-direction:column;gap:12px}
 .contact-btn{display:inline-block;padding:14px 18px;border-radius:12px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.03);color:var(--white);text-decoration:none}
 .muted{color:var(--muted);font-size:0.95rem}
-.socials{display:flex;gap:8px;margin-top:8px}
-.socials a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted);text-decoration:none}
+/* Social icons removed per user request */
 .contact-form{display:flex;flex-direction:column;gap:10px;background:var(--panel);padding:16px;border-radius:12px}
 .contact-form label span{display:block;font-size:0.85rem;margin-bottom:6px;color:var(--muted)}
 .contact-form input, .contact-form textarea{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:12px;border-radius:8px;color:var(--white)}
