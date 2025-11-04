@@ -73,17 +73,7 @@ node scripts/generate-favicons.js
 
 This will write `favicon-32.png`, `favicon-16.png`, and `favicon.ico` in the project root. `index.html` already contains link tags that point to these files as fallbacks for older browsers.
 
-If you prefer I can generate the PNG/ICO files for you and add them directly to the repository — tell me and I'll create them and update the repo.
-
-If you'd like more visual improvements, I can next:
-- Add a high-quality hero illustration or designer mockup (SVG or image) and animate it subtly.
-- Add micro-interactions (button hover transitions, card tilt on mouse) and lazy-loading of any future images.
- - Add a Clients & Testimonials section (I implemented a simple one already; feel free to supply real quotes and logos). The current testimonials and logos are placeholders I added so the homepage shows social proof. If you later provide real quotes and logo files I'll wire them in and optimize them.
- - Add a Clients & Testimonials section (I implemented a simple one already; feel free to supply real quotes and logos). The current testimonials and logos are placeholders I added so the homepage shows social proof. If you later provide real quotes and logo files I'll wire them in and optimize them.
- - The testimonial slider uses an accessible fade animation and respects users' "prefers-reduced-motion" setting.
-
-
-
+.
 ## Features
 
 - Modern dark UI with orange accent
@@ -97,107 +87,90 @@ If you'd like more visual improvements, I can next:
 
 ---
 
-## Quick start (preview locally)
+# Maraki — Creative Web Design & Development
 
-1. Clone the repository or copy the files to your machine.
-2. From the project root run a static server (recommended):
+Maraki is a minimal, dark-themed single-page site template intended for small web studios and freelancers. It provides a clean marketing landing page with service descriptions, pricing, and an approachable contact flow.
+
+This repository is structured as a static site that can be deployed to GitHub Pages, Vercel, Netlify, or any static host.
+
+---
+
+## Key features
+
+- Responsive, accessible single-page layout with a modern dark theme
+- Lottie-powered hero animation with an SVG noscript fallback
+- Pricing cards that prefill the contact form for fast lead capture
+- Accessible testimonial slider with keyboard controls and reduced-motion support
+- Mailto-based contact form (client-side) with optional serverless examples for SendGrid
+- Favicon generation script to produce PNG/ICO fallbacks from an SVG source
+
+---
+
+## Tech stack
+
+- HTML5, CSS (single stylesheet), and vanilla JavaScript
+- Lottie (LottieFiles player) for the hero animation
+- Node.js used for development tasks (favicons generation)
+
+---
+
+## Getting started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Abex04/silver-couscous.git
+cd silver-couscous
+```
+
+Preview locally with a static server (Python 3 example):
 
 ```bash
 python -m http.server 8000
-# then open http://localhost:8000 in your browser
+# then open http://localhost:8000
 ```
 
-3. Or open `index.html` directly in your browser.
-
-Notes:
-- The hero animation loads from the LottieFiles CDN. If you prefer no external runtime, replace the `<lottie-player>` with a static SVG or self-host the player.
-
----
-
-## Dev scripts
-
-- Regenerate favicons (requires Node.js and dev deps):
+Optional: install Node dev dependencies and generate favicons:
 
 ```bash
-npm install --save-dev sharp png-to-ico
+npm install
 npm run gen:favicons
 ```
 
-This produces `favicon-32.png`, `favicon-16.png` and `favicon.ico` from `favicon.svg`.
+The favicon script reads `favicon.svg` and creates `favicon-32.png`, `favicon-16.png`, and `favicon.ico`.
 
-- Other scripts:
-  - `npm run dev` — (optional) run platform-specific dev mode (e.g., `vercel dev` if you use Vercel). The project is primarily static and can be served with any static host.
 
----
+This repository includes example serverless functions demonstrating how to accept form data and send email using SendGrid:
 
-## Favicon & assets
+- `api/send-email.js` (Vercel-style serverless function)
+- `netlify/functions/send-email.js` (Netlify function)
 
-- Source SVG: `favicon.svg`
-- Generated fallbacks: `favicon-32.png`, `favicon-16.png`, `favicon.ico` (checked into the project for compatibility)
+These examples expect the following environment variables when deployed:
 
-If you update `favicon.svg`, re-run the `gen:favicons` script to regenerate PNG/ICO fallbacks.
+- `SENDGRID_API_KEY`
+- `SENDER_EMAIL`
+- `RECEIVER_EMAIL`
 
-## Serverless email examples (optional)
+Important: Do not commit real API keys or `.env` files to source control. Configure secrets using your host's environment settings.
 
-This repo includes example serverless functions demonstrating how to accept form data and send email via SendGrid:
-
-- `api/send-email.js` — example for Vercel-style serverless functions
-- `netlify/functions/send-email.js` — Netlify function example
-
-Important:
-- These examples read configuration from environment variables (`SENDGRID_API_KEY`, `SENDER_EMAIL`, `RECEIVER_EMAIL`). DO NOT commit real keys to the repo. Use your deployment platform's environment variable settings.
-- The provided examples validate input and include a simple honeypot check (`_honey`) to reduce spam.
-
-To enable server-side handling:
-1. Add your SendGrid API key and emails to environment variables on your host (Vercel/Netlify).
-2. Update the front-end to POST to the deployed function endpoint (the examples currently exist for reference).
-
----
-
-## Accessibility
-
-- The site respects `prefers-reduced-motion` and includes ARIA attributes for navigation and the testimonial slider.
-- Form fields include required state and inline error messaging.
-
-Consider running an accessibility audit (axe, Lighthouse) and testing with screen readers for additional coverage.
-
----
-
-## Deployment recommendations
-
-- Static hosting (fast & simple): Vercel, Netlify, GitHub Pages, or any static host.
-- If you deploy to Vercel/Netlify and keep the `api/` or `netlify/functions/` folders, the example functions may be deployed as serverless endpoints — only keep them if you intend to use them or move them to an `examples/` folder.
-
-Suggested steps to deploy to Vercel:
-1. Create a new Vercel project from this repo.
-2. Add environment variables (if you plan to use the serverless function): `SENDGRID_API_KEY`, `SENDER_EMAIL`, `RECEIVER_EMAIL`.
-3. Deploy — Vercel will serve the static site and any `api/` functions.
-
----
-
-## Tests & checks before publishing
-
-- Manual device checks (important): phone tel: links, mailto behavior, Lottie loading on mobile
-- Cross-browser sanity: Chrome, Firefox, Edge, Safari
-- Run Lighthouse audit for performance/accessibility/SEO
-
----
 
 ## Contributing
 
-Small contributions, fixes, and suggestions are welcome. If you'd like me to help with deployment, analytics, or serverless wiring I can prepare those changes.
+Contributions are welcome. Recommended workflow:
 
-When contributing:
-- Follow the existing code style (vanilla HTML/CSS/JS)
-- Keep the site static unless adding a clear server-side feature and documenting env vars
+1. Fork the repository
+2. Create a branch (`git checkout -b feat/your-change`)
+3. Commit changes with clear messages
+4. Open a pull request
 
 ---
 
 ## License
 
-This project is provided as-is. If you want a license added (MIT, Apache, etc.), tell me and I'll add it.
+This project is provided under the MIT License. Add a `LICENSE` file to set the project license.
 
----
+
+
 
 ## Author / Contact
 
